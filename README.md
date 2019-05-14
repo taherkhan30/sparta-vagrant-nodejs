@@ -90,7 +90,7 @@ Run on terminal
 
 This uses secure shell (SSH) protocol to enable you to use the terminal inside the ubuntu VM which is running on top of the virtual box hypervisor.
 
-now eneter the following commands on your Linux Terminal to install your Nginx server and start it. 
+now enter the following commands on your Linux Terminal to install your Nginx server and start it. 
 
 `Sudo apt-get update`
 
@@ -131,7 +131,7 @@ Link provisioning file with vagrant by adding the following line of code into Va
 
 #### Step 15
 
-Add following command to your provisioning.sh file
+Add the following commands to your provisioning.sh file
 
 `sudo apt-get update -y`
 
