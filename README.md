@@ -1,8 +1,8 @@
-# sparta-vagrant-nodejs
+# Sparta-Vagrant-Nodejs
 
 This repository holds a provisioned __dev environment__ for a __NodeJS application__. The following tools have been utilised to create the dev environment. 
 
->> This ReadMe will be useful to anyone hoping to create a dev environment for nodeJS development. You can either git clone the provisioned environment or recreate the whole environment using the steps below.
+>> This ReadMe will be useful to anyone hoping to create a dev environment for nodeJS development. You can either `git clone` the provisioned environment or recreate the whole environment using the steps below.
 
 ## Tools used
 - __Linux Ubuntu Xenial64__ – Operating system
@@ -18,7 +18,7 @@ This repository holds a provisioned __dev environment__ for a __NodeJS applicati
 2)	Git clone this repo and ensure all steps are present.
 
 #### Step 1
-Install the required tools, vagrant and virtual box.
+Install the required tools, Vagrant and VirtualBox.
 
 Virtual box is the type 2 hypervisor that runs on top your Operating system and runs Linux as a Virtual Machine. Vagrant is a provisioning tool that eases the spawning of VMs. They both work together to ease the provisioning of your dev environment.
 
@@ -28,29 +28,29 @@ On your terminal, make the required folders
 `mkdir devops`
 `cd devops`
 `mkdir dev-environment`
-`Cd dev-environment`
+`cd dev-environment`
 
 #### Step 3
-On your mac terminal start vagrant. Test vagrant is installed with the command `vagrant`, this should result in vagrant commands help list.
+On your Mac terminal start Vagrant. Test Vagrant is installed with the command `vagrant`, this should result in vagrant commands help list.
 
 #### Step 4
 Run
 
 `Vagrant init ubuntu/xenial64`
 
-This will install the linux ubuntu operating system as a virtual machine VM on the hypervisor.
+This will install the Linux Ubuntu Operating System as a virtual machine (VM) on the hypervisor.
 
-This will create a vagrant file in your dev-environment folder, you will also see a ubuntu console log file.
+This will also create a Vagrant file in your dev-environment folder, you will also see a ubuntu console log file.
 
 
 #### Step 5
-Open using your code editor such as Atom with the command
+Open these files using a code editor such as Atom with the command
 
 `atom .`
 
 #### Step 6
 
-On the vagrant file in your atom editor add the following ruby code.
+On the Vagrant file in your atom editor add the following ruby code.
 
 ```
 Vagrant.configure("2") do |config|
@@ -64,9 +64,11 @@ Vagrant class uses a loop and uses the configure method, loops through config av
 Uses a static IP to access your application through your chosen web browser.
 
 #### Step 7
-Vagrant plugin install `vagrant-hostsupdater`   
+Vagrant plugin install 
 
-use the above command to install the hosts updater plugin
+`vagrant-hostsupdater`   
+
+Use the above command to install the hosts updater plugin
 
 #### Step 8
 Add the following ruby code to Vagrant file
@@ -88,6 +90,8 @@ Run on terminal
 
 This uses secure shell (SSH) protocol to enable you to use the terminal inside the ubuntu VM which is running on top of the virtual box hypervisor.
 
+now eneter the following commands on your Linux Terminal to install your Nginx server and start it. 
+
 `Sudo apt-get update`
 
 `Sudo apt-get install nginx`
@@ -96,9 +100,9 @@ This uses secure shell (SSH) protocol to enable you to use the terminal inside t
 
 Type development.local/  into browser
 
-You should see the nginx start page in your browser
+You should see the Nginx start page in your browser
 
-The first 10 steps allow you to create an environment manually, the next steps will show you how to provision this environment using a bash script.
+The first 10 steps allow you to create an environment manually, the next steps will show you how to provision this environment using a Bash Script.
 
 #### Step 11
 
@@ -110,7 +114,10 @@ or git clone this repo and check the following steps are correct, they should al
 
 #### Step 12
 
-Git clone environment folder, this contains the rspec files to test the dev environment requirements.
+Git clone environment folder from this repo if you havent cloned the full repo, this contains the rspec files to test the dev environment requirements.
+
+run tests by going into the environment/spec-tests directory, run `rake spec`. You will see tests fail. after completing the following steps all the tests should pass. 
+
 
 #### Step 13
 
@@ -135,6 +142,7 @@ sudo npm install -g pm2
 cd /app
 pm2 start app.js --name="My Awesome App"`
 
+the above shell script update the linux server, installs nginx, installs a version6 of nodejs, intalls the oackage manager (PM2) and then starts the package manager. 
 
 #### Step 16
 Run
@@ -146,6 +154,8 @@ Run
 `vagrant up`
 
 this will create a new environment and include your provinsing.sh file.
+
+Now redo step 12 and run the tests again , it shoudl pass. 
 
 #### Step 17
 
