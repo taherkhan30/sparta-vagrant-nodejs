@@ -66,7 +66,7 @@ use the above command to install the hosts updater plugin
 
 #### Step 8
 add the following ruby code to vagrant file
-`config.hostsupdater.aliases = ['development.local']``
+`config.hostsupdater.aliases = ['development.local']`
 
 
 #### Step 9
