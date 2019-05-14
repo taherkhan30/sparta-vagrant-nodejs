@@ -1,6 +1,8 @@
 # sparta-vagrant-nodejs
 
-This repository holds a provisioned __dev environment__ for a __NodeJS application__. The following tools have been utilised to create the dev environment. This ReadMe will be useful to anyone hoping to create a dev environment for nodeJS development. You can either git clone the provisioned environment or recreate the whole environment using the steps below.
+This repository holds a provisioned __dev environment__ for a __NodeJS application__. The following tools have been utilised to create the dev environment. 
+
+>> This ReadMe will be useful to anyone hoping to create a dev environment for nodeJS development. You can either git clone the provisioned environment or recreate the whole environment using the steps below.
 
 ## Tools used
 - __Linux Ubuntu Xenial64__ – Operating system
@@ -23,10 +25,10 @@ Virtual box is the type 2 hypervisor that runs on top your Operating system and 
 #### Step 2
 On your terminal, make the required folders
 
-mkdir devops
-cd devops
-mkdir dev-environment
-Cd dev-environment
+`mkdir devops`
+`cd devops`
+`mkdir dev-environment`
+`Cd dev-environment`
 
 #### Step 3
 On your mac terminal start vagrant. Test vagrant is installed with the command `vagrant`, this should result in vagrant commands help list.
@@ -42,7 +44,7 @@ This will create a vagrant file in your dev-environment folder, you will also se
 
 
 #### Step 5
-open using your code editor such as Atom with the command
+Open using your code editor such as Atom with the command
 
 `atom .`
 
@@ -50,34 +52,37 @@ open using your code editor such as Atom with the command
 
 On the vagrant file in your atom editor add the following ruby code.
 
-`Vagrant.configure("2") do |config|
+```
+Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.network("private_network", ip:"192.168.10.100")
-end`
+end
+```
 
-vagrant class uses a loop and uses the configure method, loops through config available list of files available.
+Vagrant class uses a loop and uses the configure method, loops through config available list of files available.
 
 Uses a static IP to access your application through your chosen web browser.
 
 #### Step 7
-vagrant plugin install `vagrant-hostsupdater`   
+Vagrant plugin install `vagrant-hostsupdater`   
 
 use the above command to install the hosts updater plugin
 
 #### Step 8
-add the following ruby code to vagrant file
+Add the following ruby code to Vagrant file
+
 `config.hostsupdater.aliases = ['development.local']`
 
 
 #### Step 9
-run on terminal
+Run on terminal
 
 `Vagrant up`
 
 This creates the environment
 
 #### Step 10  
-run on terminal
+Run on terminal
 
 `Vagrant ssh`
 
@@ -119,7 +124,7 @@ Link provisioning file with vagrant by adding the following line of code into Va
 
 #### Step 15
 
-add following command to
+Add following command to
 
 `sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -132,12 +137,11 @@ pm2 start app.js --name="My Awesome App"`
 
 
 #### Step 16
-
-run
+Run
 
 `vagrant destroy`
 
-run
+Run
 
 `vagrant up`
 
