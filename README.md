@@ -115,7 +115,7 @@ Create a provisioning.sh file inside the environment folder
 
 Link provisioning file with vagrant by adding the following line of code into Vagrant file.
 
-  `config.vm.provision("shell", path:"environment/provision.sh")``
+  `config.vm.provision("shell", path:"environment/provision.sh")`
 
 #### Step 15
 
