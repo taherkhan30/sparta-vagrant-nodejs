@@ -16,6 +16,15 @@ This repository holds a provisioned __dev environment__ for a __NodeJS applicati
 ## Two ways of using this repo or ReadMe
 1)	Recreate by yourself by following the all the steps below
 2)	Git clone this repo and ensure all steps are present.
+    
+    in the case you git clone this repo and try to make it work . 
+    
+    you will need to go the ubuntu OS and run the folllwoing commands 
+    
+    `sudo npm install express`
+    `sudo npm install mongoose` 
+    `sudo npm install ejs`
+    
 
 #### Step 1
 Install the required tools, Vagrant and VirtualBox.
