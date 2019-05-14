@@ -116,7 +116,7 @@ or git clone this repo and check the following steps are correct, they should al
 
 Git clone environment folder from this repo if you havent cloned the full repo, this contains the rspec files to test the dev environment requirements.
 
-run tests by going into the environment/spec-tests directory, run `rake spec`. You will see tests fail. after completing the following steps all the tests should pass. 
+Run tests by going into the environment/spec-tests directory, run `rake spec`. You will see tests fail. after completing the following steps all the tests should pass. 
 
 
 #### Step 13
@@ -131,18 +131,25 @@ Link provisioning file with vagrant by adding the following line of code into Va
 
 #### Step 15
 
-Add following command to
+Add following command to your provisioning.sh file
 
-`sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install nginx -y
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo npm install -g pm2
-cd /app
-pm2 start app.js --name="My Awesome App"`
+`sudo apt-get update -y`
 
-the above shell script update the linux server, installs nginx, installs a version6 of nodejs, intalls the oackage manager (PM2) and then starts the package manager. 
+`sudo apt-get upgrade -y`
+
+`sudo apt-get install nginx -y`
+
+`curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+
+`sudo apt-get install -y nodejs`
+
+`sudo npm install -g pm2`
+
+`cd /app`
+
+`pm2 start app.js --name="My Awesome App`
+
+The above shell script updates the linux server, installs nginx, installs a version6 of nodejs, intalls the package manager (PM2) and then starts the package manager. 
 
 #### Step 16
 Run
@@ -160,3 +167,6 @@ Now redo step 12 and run the tests again , it shoudl pass.
 #### Step 17
 
 View the app on http://development.local:3000/
+
+
+##### Thankyou for visiting my git repo 
