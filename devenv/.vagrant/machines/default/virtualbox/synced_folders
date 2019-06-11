@@ -1,0 +1,1 @@
+{"virtualbox":{"/app":{"guestpath":"/app","hostpath":"/Users/tech-a30/Documents/engineering-29/devops/devenv/app","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/tech-a30/Documents/engineering-29/devops/devenv","disabled":false,"__vagrantfile":true}}}
